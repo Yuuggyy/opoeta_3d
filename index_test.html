@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html><head><title>JS Test</title></head>
+<body>
+<div id="app">HTML works</div>
+<script>
+document.getElementById("app").innerHTML = "JS works! " + (typeof RESTAURANT_DATA !== "undefined" ? "RESTAURANT_DATA exists" : "RESTAURANT_DATA missing");
+try {
+  document.getElementById("app").innerHTML += "<br>crypto.randomUUID: " + (typeof crypto.randomUUID);
+  document.getElementById("app").innerHTML += "<br>localStorage: " + (typeof localStorage);
+} catch(e) {
+  document.getElementById("app").innerHTML += "<br>Error: " + e.message;
+}
+</script>
+</body></html>
